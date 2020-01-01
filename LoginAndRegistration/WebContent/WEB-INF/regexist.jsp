@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <html>
 <head>
 
@@ -46,7 +46,8 @@ label
 <body>
 
 <div class="container">
-
+<h2>User Exist Already!</h2>
+<h2>*****Please Enter different user!*****</h2>
     <h1>Register</h1>
     <div>
         <form class="form" name="myForm" action="./reg" method="post" onsubmit="return validateForm()">
