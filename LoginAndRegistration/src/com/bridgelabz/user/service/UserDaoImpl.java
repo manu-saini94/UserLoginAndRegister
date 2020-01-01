@@ -94,6 +94,37 @@ public class UserDaoImpl implements UserDao {
 		return rs;
 	}
 
+	@Override
+	public String updatedInsert(String ufname, String ulname, String umobile, String uaddr, String upin, String uemail,
+			String upwd) {
+		try {
+			String s1="select * from userlog";
+			ResultSet rs1=st.executeQuery(s1);
+			while(rs1.next())
+			{
+				if(uemail.equals(rs1.getString(6)))
+				status="existed";
+				break;
+			}
+			if(!status.equals("existed"))
+			{
+				String s2="insert into userlog(ufname,ulname,umobile,uaddr,upin,uemail,upwd) values('"+ufname+"','"+ulname+"','"+umobile+"','"+uaddr+"','"+upin+"','"+uemail+"','"+upwd+"')";
+			    int n=st.executeUpdate(s2);
+			    System.out.println("Record added: "+n);
+				status="success";
+			}
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+				status="failure";
+			}
+				return status;
+		
+	}
+
+	
+
 	
 	
 

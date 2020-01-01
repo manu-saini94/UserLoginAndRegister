@@ -42,7 +42,7 @@
                  <input type="text" name="upin" value="<%= rs.getString(6)%>"></input>
              </div><br>
              <div>   
-                 <input type="text" name="upwd" value="<%= %>"></input>
+                 <input type="password" name="upwd" value="<%= %>"></input>
              </div><br>
               <div>
                  <input type="text" name="sid" value="<%= rs.getString(8)%>"></input>
