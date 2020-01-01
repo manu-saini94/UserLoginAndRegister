@@ -56,7 +56,7 @@ font-weight:bold;
                  <input type="text" name="uemail" id="uemail"></input>
              </div><br>
              <div>   
-                 <label>Password:</h3></label>
+                 <label>Password:</label>
                  <input type="password" name="upwd" id="upwd"></input>
              </div><br>   
              <div>
