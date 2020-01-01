@@ -45,8 +45,18 @@ public class Registration extends HttpServlet {
 	      rd.forward(request, response);
 	     }    
 	     else  
-	     response.sendRedirect("register.jsp");
-	    } 
+	    if(status.equals("existed"))
+	    {
+	    	 RequestDispatcher rd=request.getRequestDispatcher("regexist.jsp");
+		      rd.forward(request, response);
+	    }
+	    else
+	    {
+	    	 RequestDispatcher rd=request.getRequestDispatcher("regfail.jsp");
+		      rd.forward(request, response);
+	    	
+	   	 } 
+		}
 	   	 catch(Exception e)
 		{
 	     e.printStackTrace();
@@ -55,4 +65,4 @@ public class Registration extends HttpServlet {
 	
 	}
 
-}
+

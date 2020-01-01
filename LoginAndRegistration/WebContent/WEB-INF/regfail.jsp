@@ -54,8 +54,7 @@ label
 <body>
 
 <div class="container">
-<h2>User Exist Already!</h2>
-<h2>*****Please Enter different user!*****</h2>
+<h2>Registration Failed!</h2>
     <h1>Register</h1>
     <div>
         <form class="form" name="myForm" action="./reg" method="post" onsubmit="return validateForm()">

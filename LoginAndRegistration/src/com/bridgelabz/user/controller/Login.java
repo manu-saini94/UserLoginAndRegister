@@ -19,9 +19,6 @@ import com.bridgelabz.user.service.UserDaoImpl;
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		{ 
@@ -41,7 +38,7 @@ public class Login extends HttpServlet {
 		   	  session=request.getSession(); 
 		   	  session.setAttribute("uemail", uemail);
 		   	  session.setAttribute("upwd", upwd);
-		   	  RequestDispatcher rd=request.getRequestDispatcher("studentProfile.jsp");
+		   	  RequestDispatcher rd=request.getRequestDispatcher("userdetails.jsp");
 		      rd.forward(request, response);
 		     }    
 		     else  
