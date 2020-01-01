@@ -68,7 +68,7 @@ label
                  <input type="text" name="uaddr" id="uaddr"></input>
              </div><br>
              <div>   
-                 <label>Area Pincode:</label>
+                 <label>Pincode:</label>
                  <input type="text" name="upin" id="upin"></input>
              </div><br>
              <div>   
@@ -141,41 +141,6 @@ function validateForm()
 	    return false;
 	  }
 	  
-	  /////////////////////////////////////////////////////////////
-	    var parents = document.forms["myForm"]["parents"].value;
-	  if (parents == "") 
-	  {
-	    alert("Please fill Parents Name field");
-	    return false;
-	  }
-	  if (!isNaN(parents)) 
-	  {
-	    alert("Alphabets only Parents Name field");
-	    return false;
-	  }
-	  
-      /////////////////////////////////////////////////////////////
-      
-      var par_mobile = document.forms["myForm"]["par_mobile"].value;
-	  if (par_mobile == "") 
-	  {
-	    alert("Please fill Parents Mobile Number field");
-	    return false;
-	  }
-	  if (isNaN(par_mobile)) 
-	  {
-	    alert("Number only Parents Mobile Number field");
-	    return false;
-	  }
-	  
-	  ///////////////////////////////////////////////////////////
-	  var cur_address = document.forms["myForm"]["cur_address"].value;
-	  if (cur_address == "") 
-	  {
-	    alert("Please fill Current Address field");
-	    return false;
-	  }
-	  
 	  //////////////////////////////////////////////////////////////
 	  var per_address = document.forms["myForm"]["per_address"].value;
 	  if (per_address == "") 
@@ -197,13 +162,6 @@ function validateForm()
 	    return false;
 	  }
 	  
-	  /////////////////////////////////////////////////////////////////
-	  var username = document.forms["myForm"]["username"].value;
-	  if (username == "") 
-	  {
-	    alert("Please fill Username field");
-	    return false;
-	  }
 	  
 	  /////////////////////////////////////////////////////////////////
 	  var password = document.forms["myForm"]["password"].value;

@@ -47,4 +47,23 @@ public class UserDaoImpl implements UserDao {
 		return status;
 	}
 
+	
+	@Override
+	public ResultSet display() throws SQLException {
+		
+	  String s="select * from userlog";
+	  rs=st.executeQuery(s);
+	  return rs;
+	}
+
+	@Override
+	public ResultSet profile(String uemail) throws SQLException {
+	
+        String s="select * from userlog where uemail='"+uemail+"'";  
+
+        rs=st.executeQuery(s);
+		return rs;
+	}
+	
+
 }
