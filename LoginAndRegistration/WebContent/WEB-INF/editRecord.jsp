@@ -20,7 +20,7 @@
        while(rs.next())
        {%>
        
-         <form action="edit" method="post">
+         <form action="./edit" method="post">
                     
                    
              <div>
