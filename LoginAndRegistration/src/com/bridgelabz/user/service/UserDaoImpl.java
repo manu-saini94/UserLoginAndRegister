@@ -1,0 +1,50 @@
+package com.bridgelabz.user.service;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class UserDaoImpl implements UserDao {
+
+	ResultSet rs=null;
+	Connection con=null;
+	Statement st=null;
+	String status="";
+    
+	public UserDaoImpl()
+	{
+		  try 
+	   	    {
+	   	        Class.forName("com.mysql.cj.jdbc.Driver");
+	   	 
+	   	         con= DriverManager.getConnection("jdbc:mysql://localhost:3306/userdb","root","root");
+	   	         st= con.createStatement();
+        	}
+		  catch(Exception e)
+		  {e.printStackTrace();
+		  }
+	}
+	
+	@Override
+	public String checkLogin(String uemail,String upwd) throws SQLException {
+		
+		String s="select * from userlog where uemail='"+uemail+"' and upwd='"+upwd+"'";	
+		 rs = st.executeQuery(s);
+		 if(rs.next())
+		 status="success";	 
+	     else
+		 status="failure";
+		 return status;
+	}
+
+	@Override
+	public String register(String ufname, String ulname, String umobile, String uaddr, String upin, String uemail,
+			String upwd)
+	{
+		
+		return status;
+	}
+
+}
