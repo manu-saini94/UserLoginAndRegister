@@ -85,6 +85,16 @@ public class UserDaoImpl implements UserDao {
         rs=st.executeQuery(s);
 		return rs;
 	}
+
+	@Override
+	public ResultSet update(int uid) throws SQLException {
+		
+		 String s = "select * from userlog where uid='"+uid+"'";
+	       rs=st.executeQuery(s);
+		return rs;
+	}
+
+	
 	
 
 }

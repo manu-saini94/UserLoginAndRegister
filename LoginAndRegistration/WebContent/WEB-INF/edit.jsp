@@ -40,8 +40,8 @@
                 <td><%= rs.getString(4)%></td>
                 <td><%= rs.getString(5)%></td>
                 <td><%= rs.getString(6)%></td>
-                <td><%= rs.getString(7)%></td>
-                <td> <a href="editRecord.jsp?id=<%= rs.getString(7)%>">Edit</a> </td>
+                <td><%= rs.getString(8)%></td>
+                <td> <a href="editRecord.jsp?uid=<%= rs.getString(8)%>">Edit</a> </td>
            </tr>
         <%}%>
         

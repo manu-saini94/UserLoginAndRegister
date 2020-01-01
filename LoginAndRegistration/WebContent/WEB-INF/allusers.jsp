@@ -46,7 +46,7 @@
                 <td><%= rs.getString(4)%></td>
                 <td><%= rs.getString(5)%></td>
                 <td><%= rs.getString(6)%></td>
-                <td><%= rs.getString(7)%></td>               
+                <td><%= rs.getString(8)%></td>               
             </tr>
             
         <%}%>
