@@ -19,7 +19,7 @@ public class UserDaoImpl implements UserDao {
 	   	    {
 	   	        Class.forName("com.mysql.cj.jdbc.Driver");
 	   	 
-	   	         con= DriverManager.getConnection("jdbc:mysql://localhost:3306/userdb","root","root");
+	   	         con= DriverManager.getConnection("jdbc:mysql://localhost:3306/userdb","manu","admin");
 	   	         st= con.createStatement();
         	}
 		  catch(Exception e)
@@ -41,9 +41,11 @@ public class UserDaoImpl implements UserDao {
 	public String register(String ufname, String ulname, String umobile, String uaddr, String upin, String uemail,
 			String upwd) throws SQLException
 	{
+		System.out.println(status+"fhfjh");
 		try {
 		String s1="select * from userlog";
 		ResultSet rs1=st.executeQuery(s1);
+		System.out.println(status+"n fhtfdydt");
 		while(rs1.next())
 		{
 			if(uemail.equals(rs1.getString(6)))
@@ -55,11 +57,13 @@ public class UserDaoImpl implements UserDao {
 			String s2="insert into userlog(ufname,ulname,umobile,uaddr,upin,uemail,upwd) values('"+ufname+"','"+ulname+"','"+umobile+"','"+uaddr+"','"+upin+"','"+uemail+"','"+upwd+"')";
 		    int n=st.executeUpdate(s2);
 		    System.out.println("Record added: "+n);
+		    
 			status="success";
 		}
 		}
 		catch(Exception e)
 		{
+			System.out.println("Exception");
 			e.printStackTrace();
 			status="failure";
 		}

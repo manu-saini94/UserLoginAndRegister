@@ -49,7 +49,7 @@ label
 
     <h1>Register</h1>
     <div>
-        <form class="form" name="myForm" action="/reg" method="post" onsubmit="return validateForm()">
+        <form class="form" name="myForm" action="reg" method="post" onsubmit="return validateForm()">
                     
              <div>
                  <label>First Name:</label>

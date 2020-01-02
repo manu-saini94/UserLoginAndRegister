@@ -49,7 +49,7 @@ font-weight:bold;
 <div>
     <h1>Login</h1>
     <div>
-        <form class="form" action="/login" method="post">
+        <form class="form" action="login" method="post">
                     
              <div>
                  <label>Email:</label>

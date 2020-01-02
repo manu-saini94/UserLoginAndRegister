@@ -58,7 +58,7 @@ label
 <h2>*****Please Enter different user!*****</h2>
     <h1>Register</h1>
     <div>
-        <form class="form" name="myForm" action="/reg" method="post" onsubmit="return validateForm()">
+        <form class="form" name="myForm" action="reg" method="post" onsubmit="return validateForm()">
                     
              <div>
                  <label>First Name:</label>
