@@ -8,7 +8,7 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/softwares/servlet.jar"/>
-	<classpathentry kind="lib" path="C:/Users/user/Downloads/mysql-connector-java-8.0.17/mysql-connector-java-8.0.17.jar"/>
+	<classpathentry kind="lib" path="/home/bridgelabz/Downloads/mysql-connector-java-8.0.18.jar"/>
+	<classpathentry kind="lib" path="/home/bridgelabz/Downloads/servlet.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
