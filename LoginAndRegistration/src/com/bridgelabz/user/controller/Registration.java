@@ -53,8 +53,7 @@ public class Registration extends HttpServlet {
 	    else
 	    {
 	    	 RequestDispatcher rd=request.getRequestDispatcher("regfail.jsp");
-		      rd.forward(request, response);
-	    	
+		      rd.forward(request, response);	
 	   	 } 
 		}
 	   	 catch(Exception e)

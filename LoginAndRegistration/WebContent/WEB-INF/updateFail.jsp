@@ -16,7 +16,6 @@
         <table border="1">
          
     <tr>
-       
         <th>First Name:</th>
         <th>Last Name:</th>
         <th>Mobile:</th>
@@ -33,7 +32,6 @@
         
         while(rs.next())
         { %>    
-            
             <tr>
                 <td><%= rs.getString(1)%></td>
                 <td><%= rs.getString(2)%></td>
@@ -46,10 +44,6 @@
            </tr>
         <%}%>
         
-        </table>
-              
-    </body>
-    
-    
-    
+        </table>            
+    </body>    
 </html>
