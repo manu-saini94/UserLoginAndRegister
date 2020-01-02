@@ -97,16 +97,17 @@ public class UserDaoImpl implements UserDao {
 	@Override
 	public String updatedInsert(String ufname, String ulname, String umobile, String uaddr, String upin, String uemail,
 			String upwd) {
+		boolean flag=false;
 		try {
 			String s1="select * from userlog";
 			ResultSet rs1=st.executeQuery(s1);
 			while(rs1.next())
 			{
 				if(uemail.equals(rs1.getString(6)))
-				status="existed";
+				flag=true;
 				break;
 			}
-			if(!status.equals("existed"))
+			if(flag==true)
 			{
 				String s2="insert into userlog(ufname,ulname,umobile,uaddr,upin,uemail,upwd) values('"+ufname+"','"+ulname+"','"+umobile+"','"+uaddr+"','"+upin+"','"+uemail+"','"+upwd+"')";
 			    int n=st.executeUpdate(s2);
@@ -119,7 +120,7 @@ public class UserDaoImpl implements UserDao {
 				e.printStackTrace();
 				status="failure";
 			}
-				return status;
+			return status;
 		
 	}
 

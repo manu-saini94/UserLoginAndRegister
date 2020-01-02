@@ -12,8 +12,6 @@ import javax.servlet.http.HttpSession;
 import com.bridgelabz.user.service.UserDao;
 import com.bridgelabz.user.service.UserDaoImpl;
 
-
-
 /**
  * Servlet implementation class EditServlet
  */
@@ -44,15 +42,9 @@ public class EditServlet extends HttpServlet {
 	   	  RequestDispatcher rd=request.getRequestDispatcher("updated.jsp");
 	      rd.forward(request, response);
 	     }    
-	     else  
-	    if(status.equals("existed"))
-	    {
-	    	 RequestDispatcher rd=request.getRequestDispatcher("regexist.jsp");
-		      rd.forward(request, response);
-	    }
 	    else
 	    {
-	    	 RequestDispatcher rd=request.getRequestDispatcher("regfail.jsp");
+	    	 RequestDispatcher rd=request.getRequestDispatcher("updatefail.jsp");
 		      rd.forward(request, response);
 	    	
 	   	 } 
