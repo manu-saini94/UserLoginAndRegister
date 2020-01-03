@@ -128,9 +128,21 @@ public class UserDaoImpl implements UserDao {
 		
 	}
 
+	public String delete(int uid) throws SQLException {
+		
+	try
+	{
+	String s3="delete from userlog where uid='"+uid+"'";	
+	int n=st.executeUpdate(s3);
+	status="success";
+	}
+    catch(Exception e)
+	{
+    	status="failure";
+    	e.printStackTrace();
+	}
 	
 
-	
-	
-
+	return status;
+	}
 }

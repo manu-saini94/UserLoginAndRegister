@@ -63,7 +63,7 @@ String value=null;
         { %>    
             
             <tr>
-                 <td><%= rs.getString(1)%></td>
+                <td><%= rs.getString(1)%></td>
                 <td><%= rs.getString(2)%></td>
                 <td><%= rs.getString(3)%></td>
                 <td><%= rs.getString(4)%></td>
