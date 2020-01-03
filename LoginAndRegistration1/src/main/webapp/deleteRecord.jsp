@@ -18,11 +18,9 @@
     font-size: 30px;
     }
     </style>
-     
         <table border="1">
          
     <tr>
-       
         <th>First Name:</th>
         <th>Last Name:</th>
         <th>Mobile:</th>

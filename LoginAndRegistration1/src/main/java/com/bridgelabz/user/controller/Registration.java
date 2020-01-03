@@ -20,7 +20,6 @@ import com.bridgelabz.user.service.UserDaoImpl;
 public class Registration extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		 String status="";
 		try
