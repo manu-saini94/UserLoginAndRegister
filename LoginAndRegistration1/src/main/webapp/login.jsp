@@ -41,14 +41,30 @@ color:black;
 font-size: 30px;
 font-weight:bold;
 }
-  
+ 
+    h3
+    {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+    } 
  </style>
 </head>
 <body>
-
+ <%
+       if(session.getAttribute("uemail")!=null)
+       {
+        RequestDispatcher rd=request.getRequestDispatcher("userdetails.jsp");
+		rd.forward(request, response);
+       }
+       else
+       {
+		%>
 <div>
     <h1>Login</h1>
     <div>
+    
         <form class="form" action="login" method="post">
                     
              <div>
@@ -65,6 +81,7 @@ font-weight:bold;
         </form>    
    </div>
 </div>
-
+  <h3><a href="index.jsp">Home</a></h3>    
+  <%} %>
 </body>
 </html>

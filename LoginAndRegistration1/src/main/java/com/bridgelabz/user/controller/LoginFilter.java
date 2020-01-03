@@ -4,11 +4,13 @@ import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.bridgelabz.user.service.UserDao;
 
@@ -32,6 +34,9 @@ public class LoginFilter implements Filter {
 		HttpServletResponse res=(HttpServletResponse)response;
 		String uemail= req.getParameter("uemail");
 		String upwd= req.getParameter("upwd");
+	   HttpSession s2=req.getSession();
+	   RequestDispatcher rd=null;
+	   
 	
 		if(uemail == null || upwd == null)
 		{
@@ -39,7 +44,7 @@ public class LoginFilter implements Filter {
 		}
 		else
 		chain.doFilter(request, response);
-		UserDao dao;
+
 	}
 	
 	

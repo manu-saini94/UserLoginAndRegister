@@ -90,74 +90,74 @@ label
             
 function validateForm()
 {
-	  var fname = document.forms["myForm"]["fname"].value;
-	  if (fname == "") 
+	  var ufname = document.forms["myForm"]["ufname"].value;
+	  if (ufname == "") 
 	  {
 	    alert("Please fill First Name field");
 	    return false;
 	  }
-	  if (!isNaN(fname)) 
+	  if (!isNaN(ufname)) 
 	  {
 	    alert("Alphabets only First Name field");
 	    return false;
 	  }
 	  
 	  //////////////////////////////////////////////////////
-	  var lname = document.forms["myForm"]["lname"].value;
-	  if (lname == "") 
+	  var ulname = document.forms["myForm"]["ulname"].value;
+	  if (ulname == "") 
 	  {
 	    alert("Please fill Last Name field");
 	    return false;
 	  }
-	  if (!isNaN(lname)) 
+	  if (!isNaN(ulname)) 
 	  {
 	    alert("Alphabets only Last Name field");
 	    return false;
 	  }
 	  
 	  ////////////////////////////////////////////////////////
-	  var mobile = document.forms["myForm"]["mobile"].value;
-	  if (mobile == "") 
+	  var umobile = document.forms["myForm"]["umobile"].value;
+	  if (umobile == "") 
 	  {
 	    alert("Please fill Mobile Number field");
 	    return false;
 	  }
-	  if (isNaN(mobile)) 
+	  if (isNaN(umobile)) 
 	  {
 	    alert("Number only Mobile Number field");
 	    return false;
 	  }
 	  
 	  ///////////////////////////////////////////////////////
-	  var email = document.forms["myForm"]["email"].value;
+	  var uemail = document.forms["myForm"]["email"].value;
 	  var reg = /^(?:[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/;
-	  if (email == "") 
+	  if (uemail == "") 
 	  {
 	    alert("Please fill email field");
 	    return false;
 	  }
-	  if (reg.test(email) == false) 
+	  if (reg.test(uemail) == false) 
 	  {
 	    alert("Enter Valid email");
 	    return false;
 	  }
 	  
 	  //////////////////////////////////////////////////////////////
-	  var per_address = document.forms["myForm"]["per_address"].value;
-	  if (per_address == "") 
+	  var uaddr = document.forms["myForm"]["uaddr"].value;
+	  if (uaddr == "") 
 	  {
 	    alert("Please fill Permanent Address field");
 	    return false;
 	  }
 	  
 	  ///////////////////////////////////////////////////////////////
-	  var pincode = document.forms["myForm"]["pincode"].value;
-	  if (pincode == "") 
+	  var upin = document.forms["myForm"]["upin"].value;
+	  if (upin== "") 
 	  {
 	    alert("Please fill Pincode field");
 	    return false;
 	  }
-	  if (isNaN(pincode)) 
+	  if (isNaN(upin)) 
 	  {
 	    alert("Number only Pincode field");
 	    return false;
@@ -165,8 +165,8 @@ function validateForm()
 	  
 	  
 	  /////////////////////////////////////////////////////////////////
-	  var password = document.forms["myForm"]["password"].value;
-	  if (username == "") 
+	  var upwd = document.forms["myForm"]["upwd"].value;
+	  if (upwd == "") 
 	  {
 	    alert("Please fill Username field");
 	    return false;

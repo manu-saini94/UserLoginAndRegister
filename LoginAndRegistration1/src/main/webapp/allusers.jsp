@@ -11,13 +11,18 @@
     <head>
         <title>Details</title>
     </head>
+    <style>
+    h3
+    {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+    }
+    </style>
     
     <body>
-    <div>
-       <form action="logout" method="POST">
-          <input type="submit" value="Sign Out">
-       </form>
-    </div>
+ 
     
     <table border="1">
          
@@ -52,7 +57,7 @@
         <%}%>
         
         </table>
-              
+      <h3><a href="index.jsp">Home</a></h3>       
     </body>
     
     

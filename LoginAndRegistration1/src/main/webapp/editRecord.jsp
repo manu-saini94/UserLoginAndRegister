@@ -11,7 +11,8 @@
 </head>
 <body>
 <%
-   String id = request.getParameter("id");
+   String id =(String) request.getParameter("uid");
+System.out.print(id); 
    int v = Integer.parseInt(id);
    UserDao ud=new UserDaoImpl();
    ResultSet rs=ud.update(v);
@@ -33,21 +34,21 @@
                  <input type="text" name="umobile" value="<%= rs.getString(3)%>"></input>
              </div><br> 
              <div>   
-                 <input type="text" name="uemail" value="<%= rs.getString(4)%>"></input>
+                 <input type="text" name="uaddr" value="<%= rs.getString(4)%>"></input>
              </div><br> 
             <div>   
-                 <input type="text" name="uaddr" value="<%= rs.getString(5)%>"></input>
+                 <input type="text" name="upin" value="<%= rs.getString(5)%>"></input>
              </div><br>
              <div>   
-                 <input type="text" name="upin" value="<%= rs.getString(6)%>"></input>
+                 <input type="text" name="uemail" value="<%= rs.getString(6)%>"></input>
              </div><br>
              <div>   
-                 <input type="password" name="upwd" value="<%= %>"></input>
+                 <input type="password" name="upwd" value=""></input>
              </div><br>
               <div>
                  <input type="text" name="sid" value="<%= rs.getString(8)%>"></input>
              </div><br>    
-             <div>
+            
              <div>
                   <input type="submit" class="button" value="Update">
              </div> 

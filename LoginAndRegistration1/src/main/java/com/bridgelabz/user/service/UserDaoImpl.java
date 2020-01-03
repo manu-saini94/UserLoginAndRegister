@@ -101,15 +101,21 @@ public class UserDaoImpl implements UserDao {
 			ResultSet rs1=st.executeQuery(s1);
 			while(rs1.next())
 			{
+				System.out.println(uemail);
+				System.out.println(rs1.getString(6));
 				if(uemail.equals(rs1.getString(6)))
+				{
 				flag=true;
 				break;
+				}
 			}
+			System.out.println(flag);
+			
 			if(flag==true)
 			{
-				String s2="insert into userlog(ufname,ulname,umobile,uaddr,upin,uemail,upwd) values('"+ufname+"','"+ulname+"','"+umobile+"','"+uaddr+"','"+upin+"','"+uemail+"','"+upwd+"')";
+				String s2="update userlog set ufname='"+ufname+"' ,ulname='"+ulname+"',umobile='"+umobile+"',uaddr='"+uaddr+"',upin='"+upin+"',uemail='"+uemail+"',upwd='"+upwd+"' where uemail='"+uemail+"'";
 			    int n=st.executeUpdate(s2);
-			    System.out.println("Record added: "+n);
+			    System.out.println("Record updated: "+n);
 				status="success";
 			}
 			}

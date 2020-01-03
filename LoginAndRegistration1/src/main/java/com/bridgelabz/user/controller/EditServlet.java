@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,6 +16,7 @@ import com.bridgelabz.user.service.UserDaoImpl;
 /**
  * Servlet implementation class EditServlet
  */
+@WebServlet("/edit")
 public class EditServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -33,7 +35,7 @@ public class EditServlet extends HttpServlet {
 		String upin=request.getParameter("upin");
 		
 		UserDao ud=new UserDaoImpl();
-		status=ud.updatedInsert(ufname, ulname, umobile, uaddr, upin, uemail, upwd);
+		System.out.println(status=ud.updatedInsert(ufname, ulname, umobile, uaddr, upin, uemail, upwd));
 		if(status.equals("success"))
 	   	 {
 	   	  session=request.getSession(); 
@@ -44,7 +46,7 @@ public class EditServlet extends HttpServlet {
 	     }    
 	    else
 	    {
-	    	 RequestDispatcher rd=request.getRequestDispatcher("updatefail.jsp");
+	    	 RequestDispatcher rd=request.getRequestDispatcher("updateFail.jsp");
 		      rd.forward(request, response);
 	    	
 	   	 } 

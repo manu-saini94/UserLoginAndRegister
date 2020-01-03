@@ -5,13 +5,26 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 
-
+<%!
+HttpSession session=null;
+ResultSet rs=null;
+UserDao ud=null;
+String value=null;
+%>
 <html>
     
     <head>
         <title>Profile Page</title>
     </head>
-    
+    <style>
+    h3
+    {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+    } 
+    </style>
     <body>
     <div>
        <form action="logout" method="POST">
@@ -33,10 +46,19 @@
     </tr>
     
     <%
-        
-    String value = request.getParameter("uemail");
-        UserDao ud=new UserDaoImpl();
-        ResultSet rs=ud.profile(value);
+   session=request.getSession();
+    String val=(String)session.getAttribute("uemail");
+    if(val!=null)
+    {
+    	ud=new UserDaoImpl();
+    	rs=ud.profile(val);
+    }
+    else
+    {
+    value = (String)request.getParameter("uemail");
+    ud=new UserDaoImpl();
+    rs=ud.profile(value);
+    }
         while(rs.next())
         { %>    
             
@@ -53,7 +75,12 @@
         <%}%>
         
         </table>
-              
+        <%
+        session=request.getSession(); 
+	   	  session.setAttribute("uemail",value);
+	   	  
+        %>
+        <h3><a href="index.jsp">Home</a></h3>            
     </body>
     
     

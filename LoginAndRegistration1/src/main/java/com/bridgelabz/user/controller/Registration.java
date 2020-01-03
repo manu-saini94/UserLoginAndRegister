@@ -22,7 +22,6 @@ public class Registration extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session=null;
 		 String status="";
 		try
 		{
@@ -40,9 +39,7 @@ public class Registration extends HttpServlet {
 	   	  
 	   	 if(status.equals("success"))
 	   	 {
-	   	  session=request.getSession(); 
-	   	  session.setAttribute("uemail", uemail);
-	   	  session.setAttribute("upwd", upwd);
+	   
 	   	  RequestDispatcher rd=request.getRequestDispatcher("allusers.jsp");
 	      rd.forward(request, response);
 	     }    

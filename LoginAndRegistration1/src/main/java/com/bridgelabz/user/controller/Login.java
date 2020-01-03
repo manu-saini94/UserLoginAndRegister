@@ -24,7 +24,7 @@ public class Login extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		{ 
-			 HttpSession session=null;
+		
 			 String status=null;
 			try
 			{
@@ -37,9 +37,7 @@ public class Login extends HttpServlet {
 		   	  
 		   	 if(status.equals("success"))
 		   	 {
-		   	  session=request.getSession(); 
-		   	  session.setAttribute("uemail", uemail);
-		   	  session.setAttribute("upwd", upwd);
+		   	
 		   	  RequestDispatcher rd=request.getRequestDispatcher("userdetails.jsp");
 		      rd.forward(request, response);
 		     }    
