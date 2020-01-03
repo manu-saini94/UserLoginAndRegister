@@ -25,7 +25,6 @@ public class Registration extends HttpServlet {
 		 String status="";
 		try
 		{
-	
 		String uemail=request.getParameter("uemail");
 		String upwd=request.getParameter("upwd");
 		String ufname=request.getParameter("ufname");
